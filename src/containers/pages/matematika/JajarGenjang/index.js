@@ -37,12 +37,12 @@ class JajarGenjang extends Component {
     render(){
         return(
             <ScrollView>
-                <Text style={{textAlign: 'center',fontSize: 20}}>Rumus Jajar Genjang</Text>
-                <View style={{flexDirection:'row',alignSelf:'center',marginLeft: 20}}>
-                <View style={{width: 200,height: 200,flexDirection:'row',alignSelf:'center'}}>
-                    <Image style={{width: '75%',height: '80%'}} source={{uri:'https://chochoirunnisa.files.wordpress.com/2012/12/mfndf.jpeg'}} />
+                <Text style={{marginLeft:40, textAlign: 'center',fontSize: 20}}>Rumus Jajar Genjang</Text>
+                <View style={{marginTop: 20, flexDirection:'row',alignSelf:'center',marginLeft: 20}}>
+                <View style={{width: 200,height: 100,flexDirection:'row',alignSelf:'center'}}>
+                    <Image style={{width: '100%',height: '100%'}} source={require('../../../../assets/img/imgRumus/jajarGenjang.png')} />
                 </View>
-                <Text style={{margin: 0,marginTop: 80,fontSize: 20}}>{this.state.tinggi}</Text>
+                <Text style={{position:'absolute',marginLeft: 30, marginTop: 40,fontSize: 20}}>{this.state.tinggi}</Text>
                 </View>
                 <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 0}}>{this.state.alas}</Text>
                     <View style={{flexDirection:'row',backgroundColor: 'white',width: '80%',marginBottom: 5,borderRadius: 4,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
