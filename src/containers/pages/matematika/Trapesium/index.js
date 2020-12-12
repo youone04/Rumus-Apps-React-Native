@@ -46,23 +46,23 @@ class Trapesium extends Component {
             <ScrollView>
                 <Text style={{textAlign: 'center',fontSize: 20}}>Rumus Trapesium</Text>
                 <View style={{flexDirection:'row',alignSelf:'center',marginLeft: 20}}>
-                <View style={{width: 200,height: 200,flexDirection:'row',alignSelf:'center',marginTop: 50}}>
-                    <Image style={{width: '100%',height: '100%'}} source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCxByWee-UBmQKsQy-EEf7Pdaf1sSlgA7cQ&usqp=CAU'}} />
+                <View style={{width: 200,height: 100,flexDirection:'row',alignSelf:'center',marginTop: 50}}>
+                    <Image style={{width: '99%',height: '100%'}} source={require('../../../../assets/img/imgRumus/trapesium.png')} />
                 </View>
-                <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 80,position:'absolute',marginTop: 70}}>{this.state.sisiAtas}</Text>
-                <Text style={{margin: 0,marginTop: 140,fontSize: 20,position:'absolute',marginLeft: 60}}>{this.state.tinggi}</Text>
-                <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 80,position:'absolute',marginTop:210}}>{this.state.sisiBawah}</Text>
+                <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 80,position:'absolute',marginTop: 20}}>{this.state.sisiAtas}</Text>
+                <Text style={{margin: 0,marginTop: 75,fontSize: 20,position:'absolute',marginLeft: 55}}>{this.state.tinggi}</Text>
+                <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 80,position:'absolute',marginTop:150}}>{this.state.sisiBawah}</Text>
                 </View>
-                    <View style={{flexDirection:'row',backgroundColor: 'white',width: '80%',marginBottom: 5,borderRadius: 4,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50}}>
-                        <Text style={{fontSize: 20,marginLeft: 20,marginTop: 10}}>{`Luas : ${this.state.hasil} cm2`}</Text>
+                    <View style={{flexDirection:'row',backgroundColor: 'white',width: '80%',marginBottom: 5,borderRadius: 4,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 40,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
+                        <Text style={{fontSize: 20,marginLeft: 20,marginTop: 10}}>{`Luas : ${this.state.hasil} `}</Text>
                     </View>
                     <View style={{alignSelf:'center',marginTop: 20}}>
-                    <TextInput onChangeText={this.inputAtas}  placeholder="masukan sisi atas" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10}}/>
-                    <TextInput onChangeText={this.inputTinggi}  placeholder="Masukan tinggi" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10}}/>
-                    <TextInput onChangeText={this.inputBawah}  placeholder="Masukan sisi bawah" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10}}/>
+                    <TextInput onChangeText={this.inputAtas}  placeholder="masukan sisi atas" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}/>
+                    <TextInput onChangeText={this.inputTinggi}  placeholder="Masukan tinggi" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9,marginTop: 10}}/>
+                    <TextInput onChangeText={this.inputBawah}  placeholder="Masukan sisi bawah" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9,marginTop: 10}}/>
                     </View>
-                    <View style={{width: 80,backgroundColor: 'blue',height: 'auto',borderRadius: 10,alignSelf:'center',marginTop: 15}}>
-                    <Text onPress={() => this.hitungLuas()} style={{fontSize:13,fontWeight:'bold',color:'white',textAlign:'center',marginTop: 6}}>HITUNG LUAS</Text>    
+                    <View style={{width: '78%',backgroundColor: '#00acc1',height: 'auto',borderRadius: 10,alignSelf:'center',marginTop: 10,height: 40}}>
+                    <Text onPress={() => this.hitungLuas()} style={{fontSize:13,fontWeight:'bold',color:'white',textAlign:'center',marginTop: 6,marginTop: 13}}>HITUNG LUAS</Text>    
                     </View>
             </ScrollView>
         )
