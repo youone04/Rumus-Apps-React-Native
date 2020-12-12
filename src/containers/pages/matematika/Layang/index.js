@@ -36,13 +36,13 @@ class Layang extends Component {
         return(
             <ScrollView>
                 <Text style={{textAlign: 'center',fontSize: 20}}>Rumus layang - layang</Text>
-                <View style={{flexDirection:'row',alignSelf:'center',marginLeft: 20}}>
-                <View style={{width: 200,height: 200,flexDirection:'row',alignSelf:'center'}}>
-                    <Image style={{width: '70%',height: '85%'}} source={{uri:'https://rumuspintar.com/wp-content/uploads/2019/07/Layang-layang.jpg'}} />
+                <View style={{flexDirection:'row',alignSelf:'center',marginLeft: 20,marginTop: 20}}>
+                <View style={{width: 140,height: 200,flexDirection:'row',alignSelf:'center'}}>
+                    <Image style={{width: '100%',height: '100%'}} source={require('../../../../assets/img/imgRumus/layang.png')} />
                 </View>
-                <Text style={{margin: 0,marginTop: 80,fontSize: 20}}>{this.state.diagonal}</Text>
+                <Text style={{position:'absolute', marginLeft: 80,marginTop: 80,fontSize: 20}}>{this.state.diagonal}</Text>
                 </View>
-                <Text style={{textAlign: 'center',fontSize: 20,marginLeft: 0}}>{this.state.diagonal2}</Text>
+                <Text style={{position:'absolute', textAlign: 'center',fontSize: 20,marginLeft: 180,marginTop: 90}}>{this.state.diagonal2}</Text>
                     <View style={{flexDirection:'row',backgroundColor: 'white',width: '80%',marginBottom: 5,borderRadius: 4,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
                         <Text style={{fontSize: 20,marginLeft: 20,marginTop: 10}}>{`Luas : ${this.state.hasil}`}</Text>
                     </View>
