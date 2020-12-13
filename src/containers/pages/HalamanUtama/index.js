@@ -5,6 +5,7 @@ import {
     StatusBar,
   } from 'react-native';
   import { useNavigation } from '@react-navigation/native';
+import styles from './css';
 const HalamanUtama = () => {
     const navigation = useNavigation();
     const pindahHalamanKe = (screen) => {
@@ -13,33 +14,34 @@ const HalamanUtama = () => {
     return (
         <View>
             <StatusBar barStyle="dark-content" />
-            <Text style={{textAlign:'center',fontSize: 30,marginVertical: 25,fontFamily: 'serif'}}>List Rumus</Text>
+            <Text style={styles.listRumus}>List Rumus</Text>
             <View style={{flexDirection: 'row'}}>
-                <View style={{width: 135,marginHorizontal: 15,backgroundColor:'white',height: 135,marginTop: 10,flex: 1,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
+                <View style={styles.coverImg}>
                     <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungrumus')}>
-                        <Image style={{marginTop: 3,width: 168,height: 130,borderRadius: 4,alignSelf:'center'}} source={require('../../../assets/img/logo_mtk_optimized.jpg')} />
-                        <Text style={{textAlign:'center',fontFamily: 'Roboto',fontSize: 18,marginTop: 5}}>Matematika</Text>
+                        <Image style={styles.imgHalamanUtama} source={require('../../../assets/img/logo_mtk_optimized.jpg')} />
+                        <Text style={styles.textCover}>Matematika</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{width: 135,marginHorizontal: 15,backgroundColor:'white',height: 135,marginTop: 10,flex: 1,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
+
+                <View style={styles.coverImg}>
                     <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungrumus')}>
-                        <Image style={{marginTop: 3,width: 168,height: 130,borderRadius: 4,alignSelf:'center'}} source={require('../../../assets/img/fisika.jpg')} />
-                        <Text style={{textAlign:'center',fontFamily: 'Roboto',fontSize: 18,marginTop: 5}}>Fisika</Text>
+                        <Image style={styles.imgHalamanUtama} source={require('../../../assets/img/fisika.jpg')} />
+                        <Text style={styles.textCover}>Fisika</Text>
                     </TouchableOpacity>
                 </View>                
             </View>
 
             <View style={{flexDirection: 'row',marginTop: 50}}>
-                <View style={{width: 135,marginHorizontal: 15,backgroundColor:'white',height: 135,marginTop: 10,flex: 1,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
+                <View style={styles.coverImg}>
                     <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungrumus')}>
-                        <Image style={{marginTop: 3,width: 168,height: 130,borderRadius: 4,alignSelf:'center'}} source={require('../../../assets/img/kimia.jpg')} />
-                        <Text style={{textAlign:'center',fontFamily: 'Roboto',fontSize: 18,marginTop: 5}}>Kimia</Text>
+                        <Image style={styles.imgHalamanUtama} source={require('../../../assets/img/kimia.jpg')} />
+                        <Text style={styles.textCover}>Kimia</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{width: 135,marginHorizontal: 15,backgroundColor:'white',height: 135,marginTop: 10,flex: 1,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
+                <View style={styles.coverImg}>
                     <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungrumus')}>
-                        <Image style={{marginTop: 3,width: 168,height: 130,borderRadius: 4,alignSelf:'center'}} source={require('../../../assets/img/logo_mtk_optimized.jpg')} />
-                        <Text style={{textAlign:'center',fontFamily: 'Roboto',fontSize: 18,marginTop: 5}}>Soon</Text>
+                        <Image style={styles.imgHalamanUtama} source={require('../../../assets/img/logo_mtk_optimized.jpg')} />
+                        <Text style={styles.textCover}>Soon</Text>
                     </TouchableOpacity>
                 </View>                
             </View>
@@ -47,5 +49,6 @@ const HalamanUtama = () => {
     )
 
 }
+
 export default HalamanUtama;
 
