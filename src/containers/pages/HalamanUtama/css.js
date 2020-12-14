@@ -4,7 +4,6 @@ import {
     responsiveWidth,
     responsiveFontSize
   } from "react-native-responsive-dimensions";
-//   {textAlign:'center',fontFamily: 'Roboto',fontSize: 18,marginTop: 5}
 const styles = StyleSheet.create({
     listRumus:{
         textAlign:'center',
