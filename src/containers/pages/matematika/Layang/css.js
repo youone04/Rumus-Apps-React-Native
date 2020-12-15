@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         alignSelf:'center',
         height:responsiveHeight(15),
-        marginTop: responsiveHeight(15),
+        marginTop: responsiveHeight(17),
         shadowColor: "#000",
         shadowOffset: {width: 0,height: 4,},
         shadowOpacity: 0.32,
