@@ -16,21 +16,21 @@ const styles = StyleSheet.create({
         marginLeft: responsiveWidth(11),
         marginTop: responsiveHeight(5)
     },
-    tinggi: {
+    diagonal1: {
         position:'absolute',
         marginLeft: responsiveWidth(8), 
         marginTop: responsiveHeight(7),
         fontSize: responsiveFontSize(2)
     },
-    alas: {
+    diagonal2: {
         position:'absolute',
         textAlign: 'center',
         fontSize: responsiveFontSize(2),
         marginTop:responsiveHeight(28),
-        marginLeft: responsiveWidth(45)
+        marginLeft: responsiveWidth(43)
     },
     coverimg: {
-        width: responsiveWidth(60),
+        width: responsiveWidth(50),
         height: responsiveHeight(15),
         flexDirection:'row',
         alignSelf:'center'
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         alignSelf:'center',
         height:responsiveHeight(15),
-        marginTop: responsiveHeight(7),
+        marginTop: responsiveHeight(15),
         shadowColor: "#000",
         shadowOffset: {width: 0,height: 4,},
         shadowOpacity: 0.32,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     },
     coverTextInput: {
         alignSelf:'center',
-        marginTop: responsiveHeight(3)
+        marginTop: responsiveHeight(1)
     },
     textInput: {
         borderWidth:responsiveWidth(0.5),
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.32,
         shadowRadius: 5.46,
         elevation: 9,
-        marginTop: responsiveHeight(3)
+        marginTop: responsiveHeight(1.5)
     },
     coverButton:{
         width: responsiveWidth(80),

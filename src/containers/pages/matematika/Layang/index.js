@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {View,Text,Image} from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
-
+import styles from './css';
 class Layang extends Component {
     constructor(props){
         super(props);
@@ -35,23 +35,23 @@ class Layang extends Component {
     render(){
         return(
             <ScrollView>
-                <Text style={{textAlign: 'center',fontSize: 20}}>Rumus layang - layang</Text>
-                <View style={{flexDirection:'row',alignSelf:'center',marginLeft: 20,marginTop: 20}}>
-                <View style={{width: 140,height: 200,flexDirection:'row',alignSelf:'center'}}>
-                    <Image style={{width: '100%',height: '100%'}} source={require('../../../../assets/img/imgRumus/layang.png')} />
+                <Text style={styles.header}>Rumus layang - layang</Text>
+                <View style={styles.container}>
+                <View style={styles.coverimg}>
+                    <Image source={require('../../../../assets/img/imgRumus/layang.png')} />
                 </View>
-                <Text style={{position:'absolute', marginLeft: 80,marginTop: 80,fontSize: 20}}>{this.state.diagonal}</Text>
+                <Text style={styles.diagonal1}>{this.state.diagonal}</Text>
                 </View>
-                <Text style={{position:'absolute', textAlign: 'center',fontSize: 20,marginLeft: 180,marginTop: 90}}>{this.state.diagonal2}</Text>
-                    <View style={{flexDirection:'row',backgroundColor: 'white',width: '80%',marginBottom: 5,borderRadius: 4,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50,shadowColor: 'black',alignSelf:'center',height:90,marginTop: 50,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}>
-                        <Text style={{fontSize: 20,marginLeft: 20,marginTop: 10}}>{`Luas : ${this.state.hasil}`}</Text>
+                <Text style={styles.diagonal2}>{this.state.diagonal2}</Text>
+                    <View style={styles.kotakHasil}>
+                        <Text style={styles.textHasil}>{`Luas : ${this.state.hasil}`}</Text>
                     </View>
-                    <View style={{alignSelf:'center',marginTop: 20}}>
-                    <TextInput onChangeText={this.menanganiInput}  placeholder="masukan diagonal 1" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10,shadowColor: 'black',alignSelf:'center',height:50,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}/>
-                    <TextInput onChangeText={this.menanganiInput2}  placeholder="Masukan diagonal 2" style={{borderWidth:1,borderColor:'#E8E8E8',borderRadius: 25,height:50,fontSize: 14,paddingLeft: 45,paddingRight: 25,backgroundColor: 'white',width: 330,marginRight: 10,shadowColor: 'black',alignSelf:'center',height:50,marginTop: 5,shadowColor: "#000",shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.32,shadowRadius: 5.46,elevation: 9}}/>
+                    <View style={styles.coverTextInput}>
+                    <TextInput onChangeText={this.menanganiInput}  placeholder="masukan diagonal 1" style={styles.textInput}/>
+                    <TextInput onChangeText={this.menanganiInput2}  placeholder="Masukan diagonal 2" style={styles.textInput}/>
                     </View>
-                    <View style={{width: '78%',backgroundColor: '#00acc1',height: 'auto',borderRadius: 10,alignSelf:'center',marginTop: 15,height:40}}>
-                    <Text onPress={() => this.hitungLuas()} style={{fontSize:13,fontWeight:'bold',color:'white',textAlign:'center',marginTop: 13}}>HITUNG LUAS</Text>    
+                    <View style={styles.coverButton}>
+                    <Text onPress={() => this.hitungLuas()} style={styles.textButton}>HITUNG LUAS</Text>    
                     </View>
             </ScrollView>
         )
