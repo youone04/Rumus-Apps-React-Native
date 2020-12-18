@@ -1,9 +1,17 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Dimensions} from 'react-native';
+const {width,height} = Dimensions.get('window')
+
 import {
     responsiveHeight,
     responsiveWidth,
     responsiveFontSize
   } from "react-native-responsive-dimensions";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+  listenOrientationChange as loc,
+  removeOrientationListener as rol
+} from 'react-native-responsive-screen';
 const styles = StyleSheet.create({
     header: {
         textAlign: 'center',
@@ -13,37 +21,37 @@ const styles = StyleSheet.create({
     container: {
         flexDirection:'row',
         alignSelf:'center',
-        marginLeft: responsiveWidth(11),
-        marginTop: responsiveHeight(5)
+        marginLeft:width*0.02,
+        marginTop: height*0.04
     },
-    lebar: {
-        marginTop: responsiveHeight(8),
+    sisiAtas: {
+        marginTop: height*0.2,
+        fontSize: width*0.04,
+        position:'absolute',
+        marginLeft: width*0.06
+    },
+    sisiBawah:{
+        marginTop: height*0.5,
         fontSize: responsiveFontSize(2),
         position:'absolute',
-        marginLeft: responsiveWidth(-4)
-    },
-    panjang:{
-        marginTop: responsiveHeight(31),
-        fontSize: responsiveFontSize(2),
-        position:'absolute',
-        marginLeft: responsiveWidth(50)
+        marginLeft: width*0.5
     },
     coverimg: {
-        width: responsiveWidth(55),
-        height: responsiveHeight(18),
+        width: width*0.6,
+        height: height*0.38,
         flexDirection:'row',
-        alignSelf:'center'
+        alignSelf:'center',
     },
     kotakHasil: {
         flexDirection:'row',
         backgroundColor: 'white',
-        width: responsiveWidth(81),
-        marginBottom: responsiveHeight(1),
+        width: width*0.9,
+        marginBottom: height*0,
         borderRadius: 4,
         shadowColor: 'black',
         alignSelf:'center',
-        height:responsiveHeight(15),
-        marginTop: responsiveHeight(8),
+        height:height*0.18,
+        marginTop: height*0.07,
         shadowColor: "#000",
         shadowOffset: {width: 0,height: 4,},
         shadowOpacity: 0.32,
@@ -57,7 +65,7 @@ const styles = StyleSheet.create({
     },
     coverTextInput: {
         alignSelf:'center',
-        marginTop: responsiveHeight(1)
+        marginTop: height*0.01
     },
     textInput: {
         borderWidth:responsiveWidth(0.5),
@@ -68,17 +76,17 @@ const styles = StyleSheet.create({
         paddingLeft: responsiveWidth(5),
         paddingRight: responsiveWidth(2),
         backgroundColor: 'white',
-        width: responsiveWidth(80),
+        width: width*0.9,
         marginRight: responsiveWidth(0),
         shadowColor: "#000",
         shadowOffset: {width: 0,height: 4,},
         shadowOpacity: 0.32,
         shadowRadius: 5.46,
         elevation: 9,
-        marginTop: responsiveHeight(1.5)
+        marginTop: height*0.003
     },
     coverButton:{
-        width: responsiveWidth(80),
+        width: width*0.9,
         backgroundColor: '#00acc1',
         height: responsiveHeight(6),
         borderRadius: responsiveWidth(3),
