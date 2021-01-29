@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,TouchableOpacity,Image,ImageBackground,StyleSheet} from 'react-native';
+import {View,Text,TouchableOpacity,Image} from 'react-native';
 import {
     SafeAreaView,
     StatusBar,
@@ -24,7 +24,7 @@ const HalamanUtama = () => {
                 </View>
 
                 <View style={styles.coverImg}>
-                    <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungrumus')}>
+                    <TouchableOpacity onPress={pindahHalamanKe.bind(this,'tampungfisika')}>
                         <Image style={styles.imgHalamanUtama} source={require('../../../assets/img/fisika.jpg')} />
                         <Text style={styles.textCover}>Fisika</Text>
                     </TouchableOpacity>

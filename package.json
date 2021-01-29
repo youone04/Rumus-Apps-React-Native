@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "watch-need-help": "echo 256 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && watchman shutdown-server"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -21,6 +22,7 @@
     "react-native-responsive-screen": "^1.4.1",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.0"
+   
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

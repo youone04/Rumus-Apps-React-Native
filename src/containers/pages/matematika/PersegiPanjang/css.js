@@ -1,9 +1,10 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Dimensions} from 'react-native';
 import {
     responsiveHeight,
     responsiveWidth,
     responsiveFontSize
   } from "react-native-responsive-dimensions";
+  const {width,height} = Dimensions.get('window')
 const styles = StyleSheet.create({
     header: {
         textAlign: 'center',

@@ -10,11 +10,18 @@ import Lingkaran from '../matematika/Lingkaran';
 import Layang from '../matematika/Layang';
 import JajarGenjang from '../matematika/JajarGenjang';
 import BelahKetupat from '../matematika/BelahKetupat';
+import TampungRumusFisika from '../fisika/TampungRumusFisika';
+import SplashcScreen from '../SplashcScreen';
 const Stack = createStackNavigator();
 
 const  Router = () =>  {
     return (
         <Stack.Navigator>
+          <Stack.Screen 
+            name="splash" 
+            component={SplashcScreen} 
+            options={{headerShown: false}}
+            />
           <Stack.Screen 
             name="halamanutama" 
             component={HalamanUtama} 
@@ -63,6 +70,11 @@ const  Router = () =>  {
           <Stack.Screen 
             name="belahkeupat" 
             component={BelahKetupat} 
+            options={{headerShown: false}}
+          />
+          <Stack.Screen 
+            name="tampungfisika" 
+            component={TampungRumusFisika} 
             options={{headerShown: false}}
           />
         </Stack.Navigator>
